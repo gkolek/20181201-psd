@@ -27,6 +27,15 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-success" type="button" onclick="unshiftElement();"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <input id="element-name" type="text" class="form-control" placeholder="wpisz nazwę...">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" onclick="pushElement();" type="button"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6">
                     <button class="btn btn-primary float-right" onclick="updateArrayContentDOM();"><i class="fas fa-sync"></i>Odśwież</button>
