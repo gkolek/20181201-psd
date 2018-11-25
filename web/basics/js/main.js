@@ -1,11 +1,10 @@
 // Przykładowa tablica
 var arr = ["Alfa Romeo", "Mercedes", "Skoda", "Ferrari", "Fiat", "Volkswagen", "Kamaz", "Audi", "Mercedes"];
 
-updateArrayContentDOM();
-
 function updateArrayContentDOM() {
     // Wybranie elementu z DOM
     var arrayContentDOM = document.getElementById('array-content');
+    // Usuniecie istniejacych elementów
     arrayContentDOM.innerHTML = '';
 
     // Iterujemy po kazdym elemencie w tablicy
@@ -17,26 +16,15 @@ function updateArrayContentDOM() {
     });
 }
 
-arr.forEach(function (value, index, arr) {
-//    console.log(value);
-//    console.log(index);
-//    console.log(arr);
-});
-
-for (i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+function removeFirst() {
+    arr.shift();
+    updateArrayContentDOM();
 }
 
-
-
-
-
-
-
-
-
-
-
+function removeLast() {
+    arr.pop();
+    updateArrayContentDOM();
+}
 
 
 updateArrayLenghtDOM();
