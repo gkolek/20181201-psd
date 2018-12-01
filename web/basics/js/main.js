@@ -40,7 +40,7 @@ function mergeLeftElement(index) {
 
 // 2. Mergowanie elementu z prawej
 function mergeRightElement(index) {
-    if (index < arr.length-1) {
+    if (index < arr.length - 1) {
         arr[index] = arr[index] + ' ' + arr[index + 1]
         arr.splice(index + 1, 1);
         updateArrayContentDOM();
@@ -101,3 +101,44 @@ function updateArrayLenghtDOM() {
     var arrayLengthDOM = document.getElementById('array-length');
     arrayLengthDOM.innerHTML = arr.length;
 }
+
+// var prices = [15, 16.08, 33.23, 49.99, 50, 50.01, 150, 167.88]
+// var cost = prices.reduce(function (reduced, price) {
+//     console.log(reduced)
+//     console.log(price)
+//     var reducedPrice = price
+//     if (price > 50) {
+// reducedPrice *= 0.85
+//     }
+//     console.log(reducedPrice)
+//     console.log('...')
+//     return reduced + reducedPrice
+// }, 0)
+// console.log(cost)
+//     console.log('..................')
+
+    console.log(arr)
+var lengthTotal = arr.reduce(function (reduced, name) {
+    console.log(reduced)
+    console.log('+')
+    console.log(name.length)
+    console.log('=')
+    var unitLength = name.length
+    return reduced + unitLength
+}, 0)
+console.log(lengthTotal)
+
+
+// var squaresP1 = [1, 4, 5, 3]
+// var squaresP2 = [2, 2, 2, 2, 2]
+
+// function whoWind(squaresP1, squaresP2)
+// var areaP1 = squaresP1.reduce(function)
+
+
+var cars = ["Alfa Romeo", "Mercedes", "Skoda", "Ferrari", "Fiat", "Volkswagen", "Kamaz", "Audi", "Mercedes"];
+
+var carsLength = cars.map(function(name){
+    return name.length
+})
+console.log(carsLength)
